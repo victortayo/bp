@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -55,43 +55,43 @@
             overflow: hidden;
         }
 
-    /* Desktop Navigation */
-    .nav-desktop {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
+        /* Desktop Navigation */
+        .nav-desktop {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
 
-    .nav-link {
-        color: #00072d;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-        transition: all 0.3s ease;
-    }
+        .nav-link {
+            color: #00072d;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
 
-    .nav-link:hover {
-        color: #FFD93D;
-    }
+        .nav-link:hover {
+            color: #FFD93D;
+        }
 
-    .nav-dropdown {
-        position: relative;
-    }
+        .nav-dropdown {
+            position: relative;
+        }
 
-    .dropdown-toggle {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        color: #00072d;
-        font-weight: 500;
-        font-size: 0.95rem;
-        transition: all 0.3s ease;
-    }
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #00072d;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
 
-    .dropdown-toggle:hover {
-        color: #FFD93D;
-    }
+        .dropdown-toggle:hover {
+            color: #FFD93D;
+        }
 
         .dropdown-menu {
             position: absolute;
@@ -110,187 +110,185 @@
             padding: 0.5rem 0;
         }
 
-
-    .nav-dropdown:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: 0.9rem 1.5rem;
-        color: #00072d;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        font-size: 0.9rem;
-    }
-
-    .dropdown-menu a:hover {
-        background: #f8f9fa;
-        color: #FFD93D;
-    }
-
-    .dropdown-menu a[style*="opacity"] {
-        cursor: not-allowed;
-    }
-
-    /* Mobile Hamburger */
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        padding: 0.5rem;
-        z-index: 1001;
-    }
-
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background: #00072d;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    /* Mobile Navigation */
-    .nav-mobile {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 280px;
-        height: calc(100vh - 70px);
-        background: white;
-        box-shadow: -4px 0 20px rgba(0,0,0,0.1);
-        transition: right 0.3s ease;
-        overflow-y: auto;
-        padding: 2rem 0;
-        z-index: 999;
-    }
-
-    .nav-mobile.active {
-        right: 0;
-    }
-
-    .mobile-nav-link {
-        display: block;
-        padding: 1rem 2rem;
-        color: #00072d;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        border-bottom: 1px solid #f3f4f6;
-    }
-
-    .mobile-nav-link:hover {
-        background: #f8f9fa;
-        color: #FFD93D;
-    }
-
-    .mobile-dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        cursor: pointer;
-        border-bottom: 1px solid #f3f4f6;
-        font-weight: 500;
-        color: #00072d;
-    }
-
-    .mobile-dropdown-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        background: #f8f9fa;
-    }
-
-    .mobile-dropdown-content.active {
-        max-height: 500px;
-    }
-
-    .mobile-dropdown-content a {
-        display: block;
-        padding: 0.9rem 2rem 0.9rem 3rem;
-        color: #4b5563;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-    }
-
-    .mobile-dropdown-content a:hover {
-        background: #e5e7eb;
-        color: #FFD93D;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .nav-desktop {
-            display: none;
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
 
+        .dropdown-menu a {
+            display: block;
+            padding: 0.9rem 1.5rem;
+            color: #00072d;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #FFD93D;
+        }
+
+        .dropdown-menu a[style*="opacity"] {
+            cursor: not-allowed;
+        }
+
+        /* Mobile Hamburger */
         .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #00072d;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Navigation */
+        .nav-mobile {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 280px;
+            height: calc(100vh - 70px);
+            background: white;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding: 2rem 0;
+            z-index: 999;
+        }
+
+        .nav-mobile.active {
+            right: 0;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            color: #00072d;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-link:hover {
+            background: #f8f9fa;
+            color: #FFD93D;
+        }
+
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f3f4f6;
+            font-weight: 500;
+            color: #00072d;
+        }
+
+        .mobile-dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .mobile-dropdown-content.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-content a {
+            display: block;
+            padding: 0.9rem 2rem 0.9rem 3rem;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-content a:hover {
+            background: #e5e7eb;
+            color: #FFD93D;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-mobile {
+                display: none;
+            }
+        }
+
+        /* Cart Icon */
+        .cart-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #FFD93D;
+            color: #333;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .cart-count.show {
             display: flex;
         }
-    }
-
-    @media (min-width: 769px) {
-        .nav-mobile {
-            display: none;
-        }
-    }
-
-
-    /* Cart Icon (if needed) */
-    .cart-icon {
-        font-size: 1.5rem;
-        cursor: pointer;
-        position: relative;
-        padding: 0.5rem;
-        transition: transform 0.3s ease;
-    }
-
-    .cart-icon:hover {
-        transform: scale(1.1);
-    }
-
-    .cart-count {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #FFD93D;
-        color: #333;
-        border-radius: 50%;
-        width: 22px;
-        height: 22px;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.7rem;
-        font-weight: 700;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    .cart-count.show {
-        display: flex;
-    }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background-image: url('images/bp\ \(5\).jpeg');
+            background-image: url('images/bp (5).jpeg');
             background-size: cover;
             display: flex;
             align-items: center;
@@ -320,7 +318,6 @@
             max-width: 900px;
         }
 
-
         .hero h1 {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -330,7 +327,6 @@
             letter-spacing: -1.5px;
             text-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-
 
         .hero p {
             font-size: clamp(1.1rem, 4vw, 1.4rem);
@@ -357,7 +353,6 @@
             text-transform: uppercase;
             font-size: 0.9rem;
         }
-
 
         .cta-button:hover {
             transform: translateY(-3px);
@@ -447,38 +442,35 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
 
-
-
         /* Category backgrounds */
         .carousel-item:nth-child(1) { 
-            background-image:url('images/bp\ \(1\).jpeg') ;
+            background-image:url('images/bp (1).jpeg') ;
             background-size: cover;
         }
         .carousel-item:nth-child(2) { 
-            background-image: url('images/bp\ \(2\).png');
+            background-image: url('images/bp (2).png');
             background-size: cover;
         }
         .carousel-item:nth-child(3) { 
-            background-image: url('images/bp\ \(3\).jpeg');
+            background-image: url('images/bp (3).jpeg');
             background-size: cover;
         }
         .carousel-item:nth-child(4) { 
-            background-image: url('images/bp\ \(4\).jpeg');
+            background-image: url('images/bp (4).jpeg');
             background-size: cover;
         }
         .carousel-item:nth-child(5) { 
-            background-image: url('images/bp\ \(8\).png');
+            background-image: url('images/bp (8).png');
             background-size: cover;
         }
         .carousel-item:nth-child(6) { 
-            background-image: url('images/bp\ \(9\).png');
+            background-image: url('images/bp (9).png');
             background-size: cover;
         }
         .carousel-item:nth-child(7) { 
-            background-image: url('images/bp\ \(9\).jpeg');
+            background-image: url('images/bp (9).jpeg');
             background-size: cover;
         }
-
 
         .carousel-nav {
             position: absolute;
@@ -635,6 +627,14 @@
             background-size: cover;
             background-position: center;
             position: relative;
+            background-color: #f3f4f6;
+        }
+
+        .book-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .book-badge {
@@ -647,6 +647,7 @@
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 700;
+            z-index: 1;
         }
 
         .book-info {
@@ -878,11 +879,10 @@
         }
 
         .flaticon-icon {
-            width: 1.5em; /* Adjust size relative to the font-size */
-            height: auto; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align with the text */
+            width: 1.5em;
+            height: auto;
+            vertical-align: middle;
         }
-
 
         @media (max-width: 768px) {
             .hero { 
@@ -916,58 +916,53 @@
     <header class="header">
         <a href="index.html"><img src="images/logo.png" alt=""></a>
          
-    <!-- Desktop Navigation -->
-    <nav class="nav-desktop">
-        <a href="index.html" class="nav-link">Home</a>
-        <div class="nav-dropdown">
-            <div class="dropdown-toggle">
-                Our Stores <span>▾</span>
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-toggle">
+                    Our Stores <span>▾</span>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="tshirts.html">T-Shirts</a>
+                    <a href="books.html">Books</a>
+                    <a href="#" style="opacity: 0.5;">Crocs (Coming Soon)</a>
+                </div>
             </div>
-            <div class="dropdown-menu">
+        </nav>
+
+        <!-- Cart Icon-->
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="cart-icon" onclick="scrollToCart()">
+                🛒
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            
+            <!-- Mobile Hamburger -->
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        
+        <div class="mobile-nav-dropdown">
+            <div class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
+                <span>Our Stores</span>
+                <span id="dropdownArrow">▾</span>
+            </div>
+            <div class="mobile-dropdown-content" id="mobileDropdown">
                 <a href="tshirts.html">T-Shirts</a>
                 <a href="books.html">Books</a>
                 <a href="#" style="opacity: 0.5;">Crocs (Coming Soon)</a>
-                <!-- <a href="#" style="opacity: 0.5;">Scrubs (Coming Soon)</a> -->
             </div>
         </div>
-        <!-- <a href="about.html" class="nav-link">About Us</a> -->
     </nav>
-
-    <!-- Cart Icon-->
-    <div style="display: flex; align-items: center; gap: 1rem;">
-        <div class="cart-icon" onclick="scrollToCart()">
-            🛒
-            <span class="cart-count" id="cart-count">0</span>
-        </div>
-        
-        <!-- Mobile Hamburger -->
-        <div class="hamburger" onclick="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile Navigation -->
-<nav class="nav-mobile" id="mobileNav">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    
-    <div class="mobile-nav-dropdown">
-        <div class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
-            <span>Our Stores</span>
-            <span id="dropdownArrow">▾</span>
-        </div>
-        <div class="mobile-dropdown-content" id="mobileDropdown">
-            <a href="tshirts.html">T-Shirts</a>
-            <a href="books.html">Books</a>
-            <a href="#" style="opacity: 0.5;">Crocs (Coming Soon)</a>
-            <!-- <a href="#" style="opacity: 0.5;">Scrubs (Coming Soon)</a> -->
-        </div>
-    </div>
-    
-    <!-- <a href="about.html" class="mobile-nav-link">About Us</a> -->
-</nav>
 
     <section class="hero">
         <div class="hero-content">
@@ -1073,13 +1068,11 @@
         <div class="footer-content">
             <h3>Get in Touch</h3>
             <a href="https://wa.me/2348153086994" class="footer-button"><img src="./icons/whatsapp.png" alt="WhatsApp icon" class="flaticon-icon"> Contact Us on WhatsApp</a>
-            <!-- <a href="#" class="footer-button">📷 Follow on Instagram</a> -->
             <div class="copyright">© 2025 blueprint. All Rights Reserved.</div>
         </div>
     </footer>
 
     <script>
-
     function toggleMobileMenu() {
         const hamburger = document.querySelector('.hamburger');
         const mobileNav = document.getElementById('mobileNav');
@@ -1096,7 +1089,6 @@
         arrow.textContent = dropdown.classList.contains('active') ? '▴' : '▾';
     }
 
-    // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         const hamburger = document.querySelector('.hamburger');
         const mobileNav = document.getElementById('mobileNav');
@@ -1107,7 +1099,6 @@
         }
     });
 
-    // Optional: Cart scroll function
     function scrollToCart() {
         const cart = document.getElementById('order-summary') || document.getElementById('cart');
         if (cart) {
@@ -1122,278 +1113,273 @@
         }
     }
 
-    
-        const books = [
-            { id: 1, title: 'The Midnight Library', author: 'Matt Haig', category: 'Fiction', price: 5500, badge: 'Bestseller' },
-            { id: 2, title: 'Atomic Habits', author: 'James Clear', category: 'Self-Help', price: 6200, badge: 'Popular' },
-            { id: 3, title: 'Project Hail Mary', author: 'Andy Weir', category: 'Sci-Fi', price: 5800, badge: 'New' },
-            { id: 4, title: 'The Thursday Murder Club', author: 'Richard Osman', category: 'Mystery', price: 5400, badge: '' },
-            { id: 5, title: 'Sapiens', author: 'Yuval Noah Harari', category: 'Non-Fiction', price: 6500, badge: 'Classic' },
-            { id: 6, title: 'People We Meet on Vacation', author: 'Emily Henry', category: 'Romance', price: 4800, badge: '' },
-            { id: 7, title: 'The Silent Patient', author: 'Alex Michaelides', category: 'Mystery', price: 5200, badge: 'Bestseller' },
-            { id: 8, title: 'Educated', author: 'Tara Westover', category: 'Biography', price: 5900, badge: 'Award Winner' },
-            { id: 9, title: 'Where the Crawdads Sing', author: 'Delia Owens', category: 'Fiction', price: 5600, badge: '' },
-            { id: 10, title: 'The Body Keeps the Score', author: 'Bessel van der Kolk', category: 'Self-Help', price: 6800, badge: '' },
-            { id: 11, title: 'Dune', author: 'Frank Herbert', category: 'Sci-Fi', price: 6200, badge: 'Classic' },
-            { id: 12, title: 'The Seven Husbands of Evelyn Hugo', author: 'Taylor Jenkins Reid', category: 'Fiction', price: 5300, badge: '' },
-            { id: 13, title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', category: 'Non-Fiction', price: 6400, badge: '' },
-            { id: 14, title: 'The Guest List', author: 'Lucy Foley', category: 'Mystery', price: 5100, badge: '' },
-            { id: 15, title: '1984', author: 'George Orwell', category: 'Fiction', price: 4500, badge: 'Classic' },
-            { id: 16, title: 'Beach Read', author: 'Emily Henry', category: 'Romance', price: 4900, badge: 'Popular' },
-            { id: 17, title: 'The Psychology of Money', author: 'Morgan Housel', category: 'Self-Help', price: 5700, badge: 'Bestseller' },
-            { id: 18, title: 'Gone Girl', author: 'Gillian Flynn', category: 'Mystery', price: 5400, badge: '' },
-            { id: 19, title: 'The Martian', author: 'Andy Weir', category: 'Sci-Fi', price: 5500, badge: '' },
-            { id: 20, title: 'Becoming', author: 'Michelle Obama', category: 'Biography', price: 7200, badge: 'Bestseller' },
-            { id: 21, title: 'The Invisible Life of Addie LaRue', author: 'V.E. Schwab', category: 'Fiction', price: 5800, badge: '' },
-            { id: 22, title: 'How to Win Friends and Influence People', author: 'Dale Carnegie', category: 'Self-Help', price: 4600, badge: 'Classic' },
-            { id: 23, title: 'The Song of Achilles', author: 'Madeline Miller', category: 'Fiction', price: 5200, badge: 'Award Winner' },
-            { id: 24, title: 'Ready Player One', author: 'Ernest Cline', category: 'Sci-Fi', price: 5600, badge: '' },
-            { id: 25, title: 'It Ends with Us', author: 'Colleen Hoover', category: 'Romance', price: 5000, badge: 'Popular' },
-            { id: 26, title: 'The Alchemist', author: 'Paulo Coelho', category: 'Fiction', price: 4400, badge: 'Classic' },
-            { id: 27, title: 'Steve Jobs', author: 'Walter Isaacson', category: 'Biography', price: 6900, badge: '' },
-            { id: 28, title: 'Big Little Lies', author: 'Liane Moriarty', category: 'Mystery', price: 5300, badge: '' },
-            { id: 29, title: 'The Power of Now', author: 'Eckhart Tolle', category: 'Self-Help', price: 5400, badge: '' },
-            { id: 30, title: 'A Court of Thorns and Roses', author: 'Sarah J. Maas', category: 'Romance', price: 5500, badge: 'Popular' },
-            { id: 31, title: 'Guns, Germs, and Steel', author: 'Jared Diamond', category: 'History', price: 6700, badge: '' },
-            { id: 32, title: 'The Da Vinci Code', author: 'Dan Brown', category: 'Mystery', price: 5200, badge: '' },
-            { id: 33, title: 'Foundation', author: 'Isaac Asimov', category: 'Sci-Fi', price: 5800, badge: 'Classic' },
-            { id: 34, title: 'Outliers', author: 'Malcolm Gladwell', category: 'Non-Fiction', price: 5900, badge: '' },
-            { id: 35, title: 'The Night Circus', author: 'Erin Morgenstern', category: 'Fiction', price: 5400, badge: '' },
-            { id: 36, title: 'The Subtle Art of Not Giving a F*ck', author: 'Mark Manson', category: 'Self-Help', price: 5300, badge: 'Bestseller' },
-            { id: 37, title: 'Red, White & Royal Blue', author: 'Casey McQuiston', category: 'Romance', price: 5100, badge: '' },
-            { id: 38, title: 'The Hobbit', author: 'J.R.R. Tolkien', category: 'Fiction', price: 5700, badge: 'Classic' },
-            { id: 39, title: 'Long Live the Pumpkin Queen', author: 'Shea Ernshaw', category: 'Fiction', price: 4800, badge: 'New' },
-            { id: 40, title: 'A Brief History of Time', author: 'Stephen Hawking', category: 'Non-Fiction', price: 6100, badge: 'Classic' },
-            { id: 41, title: 'Things Fall Apart', author: 'Chinua Achebe', category: 'African', price: 4200, badge: 'Classic' },
-            { id: 42, title: 'Half of a Yellow Sun', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5400, badge: 'Bestseller' },
-            { id: 43, title: 'Americanah', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5600, badge: 'Award Winner' },
-            { id: 44, title: 'Purple Hibiscus', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5200, badge: '' },
-            { id: 45, title: 'Stay With Me', author: 'Ayọ̀bámi Adébáyọ̀', category: 'African', price: 5100, badge: '' },
-            { id: 46, title: 'The Fishermen', author: 'Chigozie Obioma', category: 'African', price: 5300, badge: 'Award Winner' },
-            { id: 47, title: 'An Orchestra of Minorities', author: 'Chigozie Obioma', category: 'African', price: 5500, badge: '' },
-            { id: 48, title: 'We Need New Names', author: 'NoViolet Bulawayo', category: 'African', price: 5000, badge: '' },
-            { id: 49, title: 'Nervous Conditions', author: 'Tsitsi Dangarembga', category: 'African', price: 4800, badge: 'Classic' },
-            { id: 50, title: 'The Joys of Motherhood', author: 'Buchi Emecheta', category: 'African', price: 4500, badge: 'Classic' },
-            { id: 51, title: 'Arrow of God', author: 'Chinua Achebe', category: 'African', price: 4300, badge: 'Classic' },
-            { id: 52, title: 'Born a Crime', author: 'Trevor Noah', category: 'African', price: 6200, badge: 'Bestseller' },
-            { id: 53, title: 'The Secret Lives of Baba Segi\'s Wives', author: 'Lola Shoneyin', category: 'African', price: 4900, badge: '' },
-            { id: 54, title: 'Homegoing', author: 'Yaa Gyasi', category: 'African', price: 5700, badge: 'Award Winner' },
-            { id: 55, title: 'Transcendent Kingdom', author: 'Yaa Gyasi', category: 'African', price: 5600, badge: '' },
-            { id: 56, title: 'The Thing Around Your Neck', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 4700, badge: '' },
-            { id: 57, title: 'My Sister, the Serial Killer', author: 'Oyinkan Braithwaite', category: 'African', price: 5200, badge: 'Popular' },
-            { id: 58, title: 'Ghana Must Go', author: 'Taiye Selasi', category: 'African', price: 5400, badge: '' },
-            { id: 59, title: 'The Beautiful Ones Are Not Yet Born', author: 'Ayi Kwei Armah', category: 'African', price: 4600, badge: 'Classic' },
-            { id: 60, title: 'Children of Blood and Bone', author: 'Tomi Adeyemi', category: 'African', price: 5800, badge: 'Popular' }
+    // BOOKS DATABASE WITH IMAGE PATHS
+    const books = [
+        { id: 1, title: 'The Midnight Library', author: 'Matt Haig', category: 'Fiction', price: 5500, badge: 'Bestseller', image: 'images/books/midnight-library.png' },
+        { id: 2, title: 'Atomic Habits', author: 'James Clear', category: 'Self-Help', price: 6200, badge: 'Popular', image: 'images/books/atomic-habits.png' },
+        { id: 3, title: 'Project Hail Mary', author: 'Andy Weir', category: 'Sci-Fi', price: 5800, badge: 'New', image: 'images/books/project-hail-mary.png' },
+        { id: 4, title: 'The Thursday Murder Club', author: 'Richard Osman', category: 'Mystery', price: 5400, badge: '', image: 'images/books/thursday-murder-club.png' },
+        { id: 5, title: 'Sapiens', author: 'Yuval Noah Harari', category: 'Non-Fiction', price: 6500, badge: 'Classic', image: 'images/books/sapiens.png' },
+        { id: 6, title: 'People We Meet on Vacation', author: 'Emily Henry', category: 'Romance', price: 4800, badge: '', image: 'images/books/people-we-meet.png' },
+        { id: 7, title: 'The Silent Patient', author: 'Alex Michaelides', category: 'Mystery', price: 5200, badge: 'Bestseller', image: 'images/books/silent-patient.png' },
+        { id: 8, title: 'Educated', author: 'Tara Westover', category: 'Biography', price: 5900, badge: 'Award Winner', image: 'images/books/educated.png' },
+        { id: 9, title: 'Where the Crawdads Sing', author: 'Delia Owens', category: 'Fiction', price: 5600, badge: '', image: 'images/books/where-the-crawdads-sing.png' },
+        { id: 10, title: 'The Body Keeps the Score', author: 'Bessel van der Kolk', category: 'Self-Help', price: 6800, badge: '', image: 'images/books/body-keeps-the-score.png' },
+        { id: 11, title: 'Dune', author: 'Frank Herbert', category: 'Sci-Fi', price: 6200, badge: 'Classic', image: 'images/books/dune.png' },
+        { id: 12, title: 'The Seven Husbands of Evelyn Hugo', author: 'Taylor Jenkins Reid', category: 'Fiction', price: 5300, badge: '', image: 'images/books/seven-husbands-of-evelyn-hugo.jpg' },
+        { id: 13, title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', category: 'Non-Fiction', price: 6400, badge: '', image: 'images/books/thinking-fast-slow.jpg' },
+        { id: 14, title: 'The Guest List', author: 'Lucy Foley', category: 'Mystery', price: 5100, badge: '', image: 'images/books/guest-list.jpg' },
+        { id: 15, title: '1984', author: 'George Orwell', category: 'Fiction', price: 4500, badge: 'Classic', image: 'images/books/1984.jpg' },
+        { id: 16, title: 'Beach Read', author: 'Emily Henry', category: 'Romance', price: 4900, badge: 'Popular', image: 'images/books/beach-read.jpg' },
+        { id: 17, title: 'The Psychology of Money', author: 'Morgan Housel', category: 'Self-Help', price: 5700, badge: 'Bestseller', image: 'images/books/psychology-money.jpg' },
+        { id: 18, title: 'Gone Girl', author: 'Gillian Flynn', category: 'Mystery', price: 5400, badge: '', image: 'images/books/gone-girl.jpg' },
+        { id: 19, title: 'The Martian', author: 'Andy Weir', category: 'Sci-Fi', price: 5500, badge: '', image: 'images/books/martian.jpg' },
+        { id: 20, title: 'Becoming', author: 'Michelle Obama', category: 'Biography', price: 7200, badge: 'Bestseller', image: 'images/books/becoming.jpg' },
+        { id: 21, title: 'The Invisible Life of Addie LaRue', author: 'V.E. Schwab', category: 'Fiction', price: 5800, badge: '', image: 'images/books/addie-larue.jpg' },
+        { id: 22, title: 'How to Win Friends and Influence People', author: 'Dale Carnegie', category: 'Self-Help', price: 4600, badge: 'Classic', image: 'images/books/win-friends.jpg' },
+        { id: 23, title: 'The Song of Achilles', author: 'Madeline Miller', category: 'Fiction', price: 5200, badge: 'Award Winner', image: 'images/books/song-achilles.jpg' },
+        { id: 24, title: 'Ready Player One', author: 'Ernest Cline', category: 'Sci-Fi', price: 5600, badge: '', image: 'images/books/ready-player-one.jpg' },
+        { id: 25, title: 'It Ends with Us', author: 'Colleen Hoover', category: 'Romance', price: 5000, badge: 'Popular', image: 'images/books/it-ends-with-us.jpg' },
+        { id: 26, title: 'The Alchemist', author: 'Paulo Coelho', category: 'Fiction', price: 4400, badge: 'Classic', image: 'images/books/alchemist.jpg' },
+        { id: 27, title: 'Steve Jobs', author: 'Walter Isaacson', category: 'Biography', price: 6900, badge: '', image: 'images/books/steve-jobs.jpg' },
+        { id: 28, title: 'Big Little Lies', author: 'Liane Moriarty', category: 'Mystery', price: 5300, badge: '', image: 'images/books/big-little-lies.jpg' },
+        { id: 29, title: 'The Power of Now', author: 'Eckhart Tolle', category: 'Self-Help', price: 5400, badge: '', image: 'images/books/power-of-now.jpg' },
+        { id: 30, title: 'A Court of Thorns and Roses', author: 'Sarah J. Maas', category: 'Romance', price: 5500, badge: 'Popular', image: 'images/books/court-thorns-roses.jpg' },
+        { id: 31, title: 'Guns, Germs, and Steel', author: 'Jared Diamond', category: 'History', price: 6700, badge: '', image: 'images/books/guns-germs-steel.jpg' },
+        { id: 32, title: 'The Da Vinci Code', author: 'Dan Brown', category: 'Mystery', price: 5200, badge: '', image: 'images/books/da-vinci-code.jpg' },
+        { id: 33, title: 'Foundation', author: 'Isaac Asimov', category: 'Sci-Fi', price: 5800, badge: 'Classic', image: 'images/books/foundation.jpg' },
+        { id: 34, title: 'Outliers', author: 'Malcolm Gladwell', category: 'Non-Fiction', price: 5900, badge: '', image: 'images/books/outliers.jpg' },
+        { id: 35, title: 'The Night Circus', author: 'Erin Morgenstern', category: 'Fiction', price: 5400, badge: '', image: 'images/books/night-circus.jpg' },
+        { id: 36, title: 'The Subtle Art of Not Giving a F*ck', author: 'Mark Manson', category: 'Self-Help', price: 5300, badge: 'Bestseller', image: 'images/books/subtle-art.jpg' },
+        { id: 37, title: 'Red, White & Royal Blue', author: 'Casey McQuiston', category: 'Romance', price: 5100, badge: '', image: 'images/books/red-white-royal-blue.jpg' },
+        { id: 38, title: 'The Hobbit', author: 'J.R.R. Tolkien', category: 'Fiction', price: 5700, badge: 'Classic', image: 'images/books/hobbit.jpg' },
+        { id: 39, title: 'Long Live the Pumpkin Queen', author: 'Shea Ernshaw', category: 'Fiction', price: 4800, badge: 'New', image: 'images/books/pumpkin-queen.jpg' },
+        { id: 40, title: 'A Brief History of Time', author: 'Stephen Hawking', category: 'Non-Fiction', price: 6100, badge: 'Classic', image: 'images/books/brief-history-time.jpg' },
+        { id: 41, title: 'Things Fall Apart', author: 'Chinua Achebe', category: 'African', price: 4200, badge: 'Classic', image: 'images/books/things-fall-apart.jpg' },
+        { id: 42, title: 'Half of a Yellow Sun', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5400, badge: 'Bestseller', image: 'images/books/half-yellow-sun.jpg' },
+        { id: 43, title: 'Americanah', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5600, badge: 'Award Winner', image: 'images/books/americanah.jpg' },
+        { id: 44, title: 'Purple Hibiscus', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 5200, badge: '', image: 'images/books/purple-hibiscus.jpg' },
+        { id: 45, title: 'Stay With Me', author: 'Ayọ̀bámi Adébáyọ̀', category: 'African', price: 5100, badge: '', image: 'images/books/stay-with-me.jpg' },
+        { id: 46, title: 'The Fishermen', author: 'Chigozie Obioma', category: 'African', price: 5300, badge: 'Award Winner', image: 'images/books/fishermen.jpg' },
+        { id: 47, title: 'An Orchestra of Minorities', author: 'Chigozie Obioma', category: 'African', price: 5500, badge: '', image: 'images/books/orchestra-minorities.jpg' },
+        { id: 48, title: 'We Need New Names', author: 'NoViolet Bulawayo', category: 'African', price: 5000, badge: '', image: 'images/books/we-need-new-names.jpg' },
+        { id: 49, title: 'Nervous Conditions', author: 'Tsitsi Dangarembga', category: 'African', price: 4800, badge: 'Classic', image: 'images/books/nervous-conditions.jpg' },
+        { id: 50, title: 'The Joys of Motherhood', author: 'Buchi Emecheta', category: 'African', price: 4500, badge: 'Classic', image: 'images/books/joys-motherhood.jpg' },
+        { id: 51, title: 'Arrow of God', author: 'Chinua Achebe', category: 'African', price: 4300, badge: 'Classic', image: 'images/books/arrow-of-god.jpg' },
+        { id: 52, title: 'Born a Crime', author: 'Trevor Noah', category: 'African', price: 6200, badge: 'Bestseller', image: 'images/books/born-a-crime.jpg' },
+        { id: 53, title: 'The Secret Lives of Baba Segi\'s Wives', author: 'Lola Shoneyin', category: 'African', price: 4900, badge: '', image: 'images/books/baba-segi-wives.jpg' },
+        { id: 54, title: 'Homegoing', author: 'Yaa Gyasi', category: 'African', price: 5700, badge: 'Award Winner', image: 'images/books/homegoing.jpg' },
+        { id: 55, title: 'Transcendent Kingdom', author: 'Yaa Gyasi', category: 'African', price: 5600, badge: '', image: 'images/books/transcendent-kingdom.jpg' },
+        { id: 56, title: 'The Thing Around Your Neck', author: 'Chimamanda Ngozi Adichie', category: 'African', price: 4700, badge: '', image: 'images/books/thing-around-neck.jpg' },
+        { id: 57, title: 'My Sister, the Serial Killer', author: 'Oyinkan Braithwaite', category: 'African', price: 5200, badge: 'Popular', image: 'images/books/my-sister-serial-killer.jpg' },
+        { id: 58, title: 'Ghana Must Go', author: 'Taiye Selasi', category: 'African', price: 5400, badge: '', image: 'images/books/ghana-must-go.jpg' },
+        { id: 59, title: 'The Beautiful Ones Are Not Yet Born', author: 'Ayi Kwei Armah', category: 'African', price: 4600, badge: 'Classic', image: 'images/books/beautiful-ones.jpg' },
+        { id: 60, title: 'Children of Blood and Bone', author: 'Tomi Adeyemi', category: 'African', price: 5800, badge: 'Popular', image: 'images/books/children-blood-bone.jpg' }
+    ];
+
+    let cart = [];
+    let currentSlide = 0;
+    let currentCategory = 'All';
+    let searchQuery = '';
+    const totalSlides = 7;
+
+    function generateBookColor(index) {
+        const colors = [
+            ['#8B4513', '#654321'],
+            ['#4682B4', '#6495ED'],
+            ['#DC143C', '#B22222'],
+            ['#4B0082', '#8A2BE2'],
+            ['#FF1493', '#DB7093'],
+            ['#228B22', '#3CB371'],
+            ['#FF8C00', '#FFA500'],
+            ['#9370DB', '#BA55D3']
         ];
+        const colorPair = colors[index % colors.length];
+        return `linear-gradient(135deg, ${colorPair[0]}, ${colorPair[1]})`;
+    }
 
-        let cart = [];
-        let currentSlide = 0;
-        let currentCategory = 'All';
-        let searchQuery = '';
-        const totalSlides = 7;
-
-        function generateBookColor(index) {
-            const colors = [
-                ['#8B4513', '#654321'],
-                ['#4682B4', '#6495ED'],
-                ['#DC143C', '#B22222'],
-                ['#4B0082', '#8A2BE2'],
-                ['#FF1493', '#DB7093'],
-                ['#228B22', '#3CB371'],
-                ['#FF8C00', '#FFA500'],
-                ['#9370DB', '#BA55D3']
-            ];
-            const colorPair = colors[index % colors.length];
-            return `linear-gradient(135deg, ${colorPair[0]}, ${colorPair[1]})`;
-        }
-
-        function renderBooks(booksToShow) {
-            const grid = document.getElementById('book-grid');
-            
-            if (booksToShow.length === 0) {
-                grid.innerHTML = '<div class="no-results">No books found matching your criteria. Try a different search or category.</div>';
-                return;
-            }
-
-            grid.innerHTML = booksToShow.map((book, index) => `
-                <div class="book-card">
-                    <div class="book-image" style="background: ${generateBookColor(index)}">
-                        ${book.badge ? `<div class="book-badge">${book.badge}</div>` : ''}
-                    </div>
-                    <div class="book-info">
-                        <div class="book-category">${book.category}</div>
-                        <div class="book-title">${book.title}</div>
-                        <div class="book-author">by ${book.author}</div>
-                        <div class="book-price">₦${book.price.toLocaleString()}</div>
-                        <button class="add-to-cart-btn" onclick="addToCart(${book.id})">Add to Cart</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function filterBooks() {
-            let filteredBooks = books;
-
-            if (currentCategory !== 'All') {
-                filteredBooks = filteredBooks.filter(book => book.category === currentCategory);
-            }
-
-            if (searchQuery) {
-                filteredBooks = filteredBooks.filter(book => 
-                    book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    book.category.toLowerCase().includes(searchQuery.toLowerCase())
-                );
-            }
-
-            renderBooks(filteredBooks);
-        }
-
-        function filterByCategory(category) {
-            currentCategory = category;
-            
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.textContent.includes(category) || (category === 'All' && btn.textContent === 'All Books')) {
-                    btn.classList.add('active');
-                }
-            });
-
-            filterBooks();
-
-            document.getElementById('browse').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function addToCart(bookId) {
-            const book = books.find(b => b.id === bookId);
-            const existingItem = cart.find(item => item.id === bookId);
-            
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({ ...book, quantity: 1 });
-            }
-            
-            updateCart();
-
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = '✓ Added!';
-            btn.style.background = '#10b981';
-            
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '#1a1a1a';
-            }, 1000);
-        }
-
-        function updateCart() {
-            const container = document.getElementById('cart-items');
-            const countEl = document.getElementById('cart-count');
-            
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            countEl.textContent = totalItems;
-            countEl.style.display = totalItems > 0 ? 'flex' : 'none';
-            
-            if (cart.length === 0) {
-                container.innerHTML = '<div class="empty-cart">Your cart is empty. Start exploring! 📖</div>';
-                return;
-            }
-            
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            
-            container.innerHTML = cart.map(item => `
-                <div class="cart-item">
-                    <div class="cart-item-info">
-                        <div class="cart-item-title">${item.title}</div>
-                        <div class="cart-item-author">by ${item.author}</div>
-                        <small style="color: #6b7280;">Quantity: ${item.quantity}</small>
-                    </div>
-                    <div class="cart-item-price">₦${(item.price * item.quantity).toLocaleString()}</div>
-                    <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
-                </div>
-            `).join('') + `
-                <div class="cart-total">
-                    <span>Total</span>
-                    <span>₦${total.toLocaleString()}</span>
-                </div>
-                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
-            `;
-        }
-
-        function removeFromCart(bookId) {
-            cart = cart.filter(item => item.id !== bookId);
-            updateCart();
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-            
-            const orderText = cart.map(item => 
-                `${item.quantity}x ${item.title} by ${item.author} - ₦${(item.price * item.quantity).toLocaleString()}`
-            ).join('\n');
-            
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const message = `Hello blueprint! I'd like to order:\n\n${orderText}\n\n*Total: ₦${total.toLocaleString()}*`;
-            
-            alert('In a real store, this would process your order!\n\nOrder Summary:\n' + orderText + '\n\nTotal: ₦' + total.toLocaleString());
-        }
-
-        function scrollToCart() {
-            document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Carousel
-        function updateCarousel() {
-            const carousel = document.getElementById('carousel');
-            carousel.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
-            
-            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function previousSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        function initializeCarousel() {
-            const dotsContainer = document.getElementById('carousel-dots');
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'carousel-dot';
-                if (i === 0) dot.classList.add('active');
-                dot.onclick = () => {
-                    currentSlide = i;
-                    updateCarousel();
-                };
-                dotsContainer.appendChild(dot);
-            }
-            
-            setInterval(nextSlide, 5000);
-        }
-
+    function renderBooks(booksToShow) {
+        const grid = document.getElementById('book-grid');
         
-        // Search functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            renderBooks(books);
-            initializeCarousel();
+        if (booksToShow.length === 0) {
+            grid.innerHTML = '<div class="no-results">No books found matching your criteria. Try a different search or category.</div>';
+            return;
+        }
 
-            const searchInput = document.getElementById('search-input');
-            searchInput.addEventListener('input', (e) => {
-                searchQuery = e.target.value;
-                filterBooks();
-            });
+        grid.innerHTML = booksToShow.map((book, index) => `
+            <div class="book-card">
+                <div class="book-image" style="${book.image ? '' : `background: ${generateBookColor(index)}`}">
+                    ${book.image ? `<img src="${book.image}" alt="${book.title}" onerror="this.style.display='none'; this.parentElement.style.background='${generateBookColor(index)}'">` : ''}
+                    ${book.badge ? `<div class="book-badge">${book.badge}</div>` : ''}
+                </div>
+                <div class="book-info">
+                    <div class="book-category">${book.category}</div>
+                    <div class="book-title">${book.title}</div>
+                    <div class="book-author">by ${book.author}</div>
+                    <div class="book-price">₦${book.price.toLocaleString()}</div>
+                    <button class="add-to-cart-btn" onclick="addToCart(${book.id})">Add to Cart</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function filterBooks() {
+        let filteredBooks = books;
+
+        if (currentCategory !== 'All') {
+            filteredBooks = filteredBooks.filter(book => book.category === currentCategory);
+        }
+
+        if (searchQuery) {
+            filteredBooks = filteredBooks.filter(book => 
+                book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                book.category.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+        }
+
+        renderBooks(filteredBooks);
+    }
+
+    function filterByCategory(category) {
+        currentCategory = category;
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.textContent.includes(category) || (category === 'All' && btn.textContent === 'All Books')) {
+                btn.classList.add('active');
+            }
         });
+
+        filterBooks();
+        document.getElementById('browse').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function addToCart(bookId) {
+        const book = books.find(b => b.id === bookId);
+        const existingItem = cart.find(item => item.id === bookId);
+        
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ ...book, quantity: 1 });
+        }
+        
+        updateCart();
+
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Added!';
+        btn.style.background = '#10b981';
+        
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '#1a1a1a';
+        }, 1000);
+    }
+
+    function updateCart() {
+        const container = document.getElementById('cart-items');
+        const countEl = document.getElementById('cart-count');
+        
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        countEl.textContent = totalItems;
+        countEl.style.display = totalItems > 0 ? 'flex' : 'none';
+        
+        if (cart.length === 0) {
+            container.innerHTML = '<div class="empty-cart">Your cart is empty. Start exploring! 📖</div>';
+            return;
+        }
+        
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        
+        container.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div class="cart-item-info">
+                    <div class="cart-item-title">${item.title}</div>
+                    <div class="cart-item-author">by ${item.author}</div>
+                    <small style="color: #6b7280;">Quantity: ${item.quantity}</small>
+                </div>
+                <div class="cart-item-price">₦${(item.price * item.quantity).toLocaleString()}</div>
+                <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+            </div>
+        `).join('') + `
+            <div class="cart-total">
+                <span>Total</span>
+                <span>₦${total.toLocaleString()}</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        `;
+    }
+
+    function removeFromCart(bookId) {
+        cart = cart.filter(item => item.id !== bookId);
+        updateCart();
+    }
+
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        
+        const orderText = cart.map(item => 
+            `${item.quantity}x ${item.title} by ${item.author} - ₦${(item.price * item.quantity).toLocaleString()}`
+        ).join('\n');
+        
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const message = `Hello blueprint! I'd like to order:\n\n${orderText}\n\n*Total: ₦${total.toLocaleString()}*`;
+        
+        window.open(`https://wa.me/2348153086994?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Carousel Functions
+    function updateCarousel() {
+        const carousel = document.getElementById('carousel');
+        carousel.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+        
+        document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function previousSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    function initializeCarousel() {
+        const dotsContainer = document.getElementById('carousel-dots');
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'carousel-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => {
+                currentSlide = i;
+                updateCarousel();
+            };
+            dotsContainer.appendChild(dot);
+        }
+        
+        setInterval(nextSlide, 5000);
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        renderBooks(books);
+        initializeCarousel();
+
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterBooks();
+        });
+    });
     </script>
 </body>
 </html>

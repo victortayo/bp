@@ -292,6 +292,7 @@
             min-height: 100vh;
             background-image: url('images/bp\ \(5\).jpeg');
             background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -299,7 +300,6 @@
             padding: 2rem;
             position: relative;
             overflow: hidden;
-            margin-top: 80px;
         }
 
         .hero::before {
@@ -434,7 +434,7 @@
         }
 
         .carousel-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 0.8rem;
@@ -886,7 +886,10 @@
 
 
         @media (max-width: 768px) {
-            .hero { padding: 1rem; margin-top: 70px; }
+            .hero { 
+                padding: 1rem; 
+                background-position: center center;
+            }
             .book-grid { 
                 grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                 gap: 1.5rem;
@@ -912,8 +915,7 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="">
-        <!-- <div class="logo">blueprint</div> -->
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
          
     <!-- Desktop Navigation -->
     <nav class="nav-desktop">

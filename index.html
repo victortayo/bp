@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blueprint - Quality Products for Every Need</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Space Grotesk", sans-serif;
+            line-height: 1.6;
+            color: #00072d;
+            background: #fefefe;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            max-height: 40px;
+            width: auto;
+        }
+
+        .logo {
+            width: 120px;
+            height: 40px;
+            background: url('image/logo.png') cover no-repeat fixed;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Desktop Navigation */
+        .nav-desktop {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #00072d;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #FFD93D;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #00072d;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-toggle:hover {
+            color: #FFD93D;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 200px;
+            margin-top: 0.5rem;
+            margin-right: 0.2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.9rem 1.5rem;
+            color: #00072d;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #FFD93D;
+        }
+
+        .dropdown-menu a[style*="opacity"] {
+            cursor: not-allowed;
+        }
+
+        /* Mobile Navigation */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #00072d;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-mobile {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 280px;
+            height: calc(100vh - 70px);
+            background: white;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+            z-index: 999;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding: 2rem 0;
+        }
+
+        .nav-mobile.active {
+            right: 0;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            color: #00072d;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-link:hover {
+            background: #f8f9fa;
+            color: #FFD93D;
+        }
+
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f3f4f6;
+            font-weight: 500;
+        }
+
+        .mobile-dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .mobile-dropdown-content.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-content a {
+            display: block;
+            padding: 0.9rem 2rem 0.9rem 3rem;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-content a:hover {
+            background: #e5e7eb;
+            color: #FFD93D;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background-image: url('images/bp\ \(1\).png');            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: '🛍️';
+            position: absolute;
+            font-size: 500px;
+            opacity: 0.03;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(8deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+
+
+        .hero h1 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        /* Store Grid */
+        .stores-section {
+            padding: 6rem 2rem;
+            background: #fff;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #00072d;
+            letter-spacing: -1.5px;
+        }
+
+        .stores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .store-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 2px solid transparent;
+        }
+
+        .store-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: #FFD93D;
+        }
+
+        .store-image {
+            width: 100%;
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .store-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #FFD93D;
+            color: #00072d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .store-info {
+            padding: 2rem;
+        }
+
+        .store-title {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #00072d;
+        }
+
+        .store-description {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .store-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #00072d;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .store-card:hover .store-cta {
+            color: #FFD93D;
+            gap: 0.8rem;
+        }
+
+        /* Coming Soon Card */
+        .coming-soon {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-color: transparent;
+        }
+
+        .coming-soon .store-badge {
+            background: #9ca3af;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: #00072d;
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -0.3px;
+        }
+
+        .footer-button {
+            background: transparent;
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            margin: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            opacity: 0.6;
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .flaticon-icon {
+            width: 1.5em; /* Adjust size relative to the font-size */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align with the text */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                margin-top: 60px;
+                min-height: 90vh;
+            }
+
+            .stores-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .store-image {
+                height: 220px;
+            }
+
+            .stores-section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-mobile {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="images/logo.png" alt="">
+        
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-toggle nav-link">
+                    Our Stores <span>▾</span>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="tshirts.html">T-Shirts</a>
+                    <a href="books.html">Books</a>
+                    <a href="#" style="opacity: 0.5;">Crocs (Coming Soon)</a>
+                    <!-- <a href="#" style="opacity: 0.5;">Scrubs (Coming Soon)</a> -->
+                </div>
+            </div>
+            <!-- <a href="about.html" class="nav-link">About Us</a> -->
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        
+        <div class="mobile-nav-dropdown">
+            <div class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
+                <span>Our Stores</span>
+                <span id="dropdownArrow">▾</span>
+            </div>
+            <div class="mobile-dropdown-content" id="mobileDropdown">
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="books.html">Books</a>
+                <a href="#" style="opacity: 0.5;">Crocs (Coming Soon)</a>
+                <!-- <a href="#" style="opacity: 0.5;">Scrubs (Coming Soon)</a> -->
+            </div>
+        </div>
+        
+        <!-- <a href="about.html" class="mobile-nav-link">About Us</a> -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>What are you buying from us today?</h1>
+            <p>Quality products curated with care for every need</p>
+        </div>
+    </section>
+
+
+
+    <!-- Stores Section -->
+    <section class="stores-section">
+        <h2 class="section-title">Explore Our Stores</h2>
+        
+        <div class="stores-grid">
+            <!-- T-Shirts Store -->
+            <a href="tshirts.html" class="store-card">
+                <div class="store-image" style="background-image: url('images/bp\ \(3\).png'); background-size: cover;">
+                    <div class="store-badge">Available Now</div>
+                </div>
+                <div class="store-info">
+                    <h3 class="store-title">Plain T-Shirts</h3>
+                    <p class="store-description">Premium quality plain tees in multiple colors and sizes. Perfect for everyone, every day.</p>
+                    <span class="store-cta">Shop T-Shirts →</span>
+                </div>
+            </a>
+
+            <!-- Books Store -->
+            <a href="books.html" class="store-card">
+                <div class="store-image" style="background-image: url('images/bp\ \(5\).png'); background-size: cover;">
+                    <div class="store-badge">Available Now</div>
+                </div>
+                <div class="store-info">
+                    <h3 class="store-title">Books</h3>
+                    <p class="store-description">Curated collection of books across all genres. Featuring African literature and bestsellers.</p>
+                    <span class="store-cta">Browse Books →</span>
+                </div>
+            </a>
+
+            <!-- Crocs - Coming Soon -->
+            <div class="store-card coming-soon">
+                <div class="store-image" style="background-image: url('images/bp\ \(6\).png'); background-size: cover;">
+                    <div class="store-badge">Coming Soon</div>
+                </div>
+                <div class="store-info">
+                    <h3 class="store-title">Crocs</h3>
+                    <p class="store-description">Comfortable and stylish footwear for all occasions. Stay tuned for our launch!</p>
+                    <span class="store-cta">Notify Me →</span>
+                </div>
+            </div>
+
+            <!-- Scrubs - Coming Soon -->
+            <!-- <div class="store-card coming-soon">
+                <div class="store-image" style="background: linear-gradient(135deg, #2196F3, #42A5F5);">
+                    <div class="store-badge">Coming Soon</div>
+                </div>
+                <div class="store-info">
+                    <h3 class="store-title">Medical Scrubs</h3>
+                    <p class="store-description">Professional quality medical scrubs for healthcare workers. Coming soon to blueprint.</p>
+                    <span class="store-cta">Notify Me →</span>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Get in Touch</h3>
+            <a href="https://wa.me/2348153086994" class="footer-button"><img src="./icons/whatsapp.png" alt="WhatsApp icon" class="flaticon-icon"> Contact Us on WhatsApp</a>
+            <!-- <a href="#" class="footer-button">📷 Follow on Instagram</a> -->
+            <div class="copyright">© 2025 blueprint. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        }
+
+        function toggleMobileDropdown() {
+            const dropdown = document.getElementById('mobileDropdown');
+            const arrow = document.getElementById('dropdownArrow');
+            
+            dropdown.classList.toggle('active');
+            arrow.textContent = dropdown.classList.contains('active') ? '▴' : '▾';
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (!hamburger.contains(event.target) && !mobileNav.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
